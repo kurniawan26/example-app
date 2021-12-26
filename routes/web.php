@@ -22,3 +22,7 @@ Auth::routes();
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/dashboard', [App\Http\Controllers\dashboard\DashboardController::class, 'index'])->name('dashboard');
+Route::get('/dashboard/users', [App\Http\Controllers\dashboard\UserController::class, 'index']);
+Route::get('/dashboard/user/edit/{id}', [App\Http\Controllers\dashboard\UserController::class, 'edit']);
+Route::post('/dashboard/user/update/{id}', [App\Http\Controllers\dashboard\UserController::class, 'update']);
+Route::post('/dashboard/user/delete/{id}', [App\Http\Controllers\dashboard\UserController::class, 'delete']);

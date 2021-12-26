@@ -40,6 +40,16 @@ class Menu extends Component
         ];
     }
 
+    public function listLink(){
+        return [
+            ['link' => 'dashboard'],
+            ['link' => 'movies'],
+            ['link' => 'theaters'],
+            ['link' => 'tickets'],
+            ['link' => 'users'],
+        ];
+    }
+
     public function isActive($label){
         return $label === $this->active;
     }

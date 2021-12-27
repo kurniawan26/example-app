@@ -17,7 +17,7 @@
     <div class="card-body">
         <div class="row">
             <div class="col-md-8 offset-md-2">
-                <form method="POST" class="d-flex flex-column mb-2" style="gap: 1rem" action="{{url('dashboard/user/update/'. $user->id)}}">
+                <form method="POST" class="d-flex flex-column mb-2" style="gap: 1rem" action="{{route('dashboard.user.update', ['id' =>$user->id])}}">
                     @csrf
                     <div class="form-group">
                         <label for="name">Name</label>
@@ -56,7 +56,7 @@
                 </p>
             </div>
             <div class="modal-footer">
-                <form action="{{url('dashboard/user/delete/'.$user->id)}}" method="post">
+                <form action="{{route('dashboard.user.delete', ['id' =>$user->id])}}" method="post">
                     @csrf
                     <button class="btn btn-sm btn-danger"><i class="fas fa-trash"></i>&nbsp;Delete</button>
                 </form>

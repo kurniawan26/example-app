@@ -9,7 +9,7 @@
             </div>
 
             <div class="col-4">
-                <form action="{{url('dashboard/users')}}" method="GET">
+                <form action="{{route('dashboard.users')}}" method="GET">
                     <div class="input-group d-flex align-items-center">
                         <input type="text" class="form-control form-control-sm" name="query" placeholder="Masukan data yang ingin anda cari" value="{{$request['query'] ?? ''}}">
                         <div class="input-group-append">
@@ -41,7 +41,7 @@
                     <td>{{$user->email}}</td>
                     <td>{{$user->created_at}}</td>
                     <td>{{$user->updated_at}}</td>
-                    <td><a href="{{url('dashboard/user/edit/'.$user->id)}}" title="Edit" class="btn btn-success btn-sm"><i class="fas fa-edit"></i></a></td>
+                    <td><a href="{{route('dashboard.user.edit', ['id' =>$user->id])}}" title="Edit" class="btn btn-success btn-sm"><i class="fas fa-edit"></i></a></td>
                 </tr>
                 
             @endforeach

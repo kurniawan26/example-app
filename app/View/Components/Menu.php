@@ -32,21 +32,31 @@ class Menu extends Component
 
     public function list(){
         return [
-            ['label' => 'Dashboard'],
-            ['label' => 'Movies'],
-            ['label' => 'Theaters'],
-            ['label' => 'Tickets'],
-            ['label' => 'Users'],
-        ];
-    }
-
-    public function listLink(){
-        return [
-            ['link' => 'dashboard'],
-            ['link' => 'movies'],
-            ['link' => 'theaters'],
-            ['link' => 'tickets'],
-            ['link' => 'users'],
+            [
+                'label' => 'Dashboard', 
+                'route' => 'dashboard',
+                'icon' => 'fas fa-tachometer-alt'
+            ],
+            [
+                'label' => 'Movies', 
+                'route' => 'dashboard.movies',
+                'icon' => 'fas fa-video'
+            ],
+            [
+                'label' => 'Theaters', 
+                'route' => 'dashboard.theaters',
+                'icon' => 'fas fa-university'
+            ],
+            [
+                'label' => 'Tickets', 
+                'route' => 'dashboard.tickets',
+                'icon' => 'fas fa-ticket-alt'
+            ],
+            [
+                'label' => 'Users', 
+                'route' => 'dashboard.users',
+                'icon' => 'fas fa-users'
+            ],
         ];
     }
 

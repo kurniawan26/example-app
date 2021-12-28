@@ -22,7 +22,10 @@ Auth::routes();
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::middleware('auth')->group(function(){
-    Route::get('/dashboard', [App\Http\Controllers\dashboard\DashboardController::class, 'index']);
+    Route::get('/dashboard', [App\Http\Controllers\dashboard\DashboardController::class, 'index'])->name('dashboard');
+    Route::get('/dashboard/movies', [App\Http\Controllers\dashboard\DashboardController::class, 'index'])->name('dashboard.movies');
+    Route::get('/dashboard/theaters', [App\Http\Controllers\dashboard\DashboardController::class, 'index'])->name('dashboard.theaters');
+    Route::get('/dashboard/tickets', [App\Http\Controllers\dashboard\DashboardController::class, 'index'])->name('dashboard.tickets');
     
     Route::get('/dashboard/users', [App\Http\Controllers\dashboard\UserController::class, 'index'])->name('dashboard.users');
     Route::get('/dashboard/users/{id}', [App\Http\Controllers\dashboard\UserController::class, 'edit'])->name('dashboard.user.edit');

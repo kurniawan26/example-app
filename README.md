@@ -17,13 +17,15 @@ Program ini hanya sebuah dashboard aplikasi ticket yang dibuat dengan sebuah fra
 - Fitur Search Query
 - Fitur Update.
 - Fitur Delete.
+- Fitur Soft Deletes (For Banned or Suspend Account)
+- Middleware
 
 ### Anggota Kelompok
 
 - **Fauzi Kurniawan - 1903015029**
 - **Susilo Dwi Cahyo - 1903015022**
 - **Muhammad Farhan Saleh - 1903015010**
-- ** **
+- **Bayu Gagas Setiawan - 1803015183**
 
 ## Akhir Kata
 
